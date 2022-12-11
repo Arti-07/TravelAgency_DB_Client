@@ -160,6 +160,9 @@
     <EmbeddedResource Include="AddHotel.resx">
       <DependentUpon>AddHotel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSales.resx">
+      <DependentUpon>AddSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTrip.resx">
       <DependentUpon>AddTrip.cs</DependentUpon>
     </EmbeddedResource>

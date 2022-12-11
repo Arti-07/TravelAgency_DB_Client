@@ -67,7 +67,6 @@ namespace TravelAgency
                 textBoxPatronymic.Text = String.Empty;
                 textBoxPhone.Text = String.Empty;
                 dateTimePicker.Value = DateTime.Now;
-
             }
             catch (Exception exception)
             {

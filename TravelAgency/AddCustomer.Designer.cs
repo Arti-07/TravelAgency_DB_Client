@@ -61,13 +61,15 @@
             // 
             // btnShowCustomers
             // 
+            this.btnShowCustomers.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnShowCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnShowCustomers.Location = new System.Drawing.Point(1153, 407);
             this.btnShowCustomers.Name = "btnShowCustomers";
             this.btnShowCustomers.Size = new System.Drawing.Size(156, 60);
             this.btnShowCustomers.TabIndex = 1;
             this.btnShowCustomers.Text = "Show Customers";
-            this.btnShowCustomers.UseVisualStyleBackColor = true;
+            this.btnShowCustomers.UseVisualStyleBackColor = false;
             this.btnShowCustomers.Click += new System.EventHandler(this.btnShowCustomers_Click);
             // 
             // labelAddCustomer
@@ -191,6 +193,7 @@
             // 
             // btnAddCustomer
             // 
+            this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddCustomer.Location = new System.Drawing.Point(32, 346);
             this.btnAddCustomer.Name = "btnAddCustomer";
@@ -222,7 +225,9 @@
             this.Controls.Add(this.labelAddCustomer);
             this.Controls.Add(this.btnShowCustomers);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";

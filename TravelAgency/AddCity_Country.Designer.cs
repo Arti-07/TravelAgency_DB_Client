@@ -249,6 +249,8 @@
             this.Controls.Add(this.textBoxCity_Coutry_id);
             this.Controls.Add(this.textBoxCity_name);
             this.Controls.Add(this.textBoxCity_id);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AddCity_Country";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adding city and country";

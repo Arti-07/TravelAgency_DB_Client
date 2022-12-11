@@ -59,7 +59,7 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1048, 395);
+            this.dataGridView.Size = new System.Drawing.Size(1085, 395);
             this.dataGridView.TabIndex = 0;
             // 
             // labelHotelAdd
@@ -200,6 +200,7 @@
             // 
             // btnShowCity
             // 
+            this.btnShowCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnShowCity.Location = new System.Drawing.Point(355, 410);
             this.btnShowCity.Name = "btnShowCity";
@@ -211,23 +212,26 @@
             // 
             // btnShowHotels
             // 
+            this.btnShowHotels.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnShowHotels.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowHotels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowHotels.Location = new System.Drawing.Point(1252, 410);
+            this.btnShowHotels.Location = new System.Drawing.Point(1289, 410);
             this.btnShowHotels.Name = "btnShowHotels";
             this.btnShowHotels.Size = new System.Drawing.Size(151, 64);
             this.btnShowHotels.TabIndex = 23;
             this.btnShowHotels.Text = "Show Hotels";
-            this.btnShowHotels.UseVisualStyleBackColor = true;
+            this.btnShowHotels.UseVisualStyleBackColor = false;
             this.btnShowHotels.Click += new System.EventHandler(this.btnShowHotels_Click);
             // 
             // btnAddHotel
             // 
+            this.btnAddHotel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddHotel.Location = new System.Drawing.Point(16, 410);
             this.btnAddHotel.Name = "btnAddHotel";
             this.btnAddHotel.Size = new System.Drawing.Size(272, 59);
             this.btnAddHotel.TabIndex = 24;
-            this.btnAddHotel.Text = "Add Hotel";
+            this.btnAddHotel.Text = "Add Hotel to DB";
             this.btnAddHotel.UseVisualStyleBackColor = true;
             this.btnAddHotel.Click += new System.EventHandler(this.btnAddHotel_Click);
             // 
@@ -236,7 +240,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(1415, 486);
+            this.ClientSize = new System.Drawing.Size(1452, 486);
             this.Controls.Add(this.btnAddHotel);
             this.Controls.Add(this.btnShowHotels);
             this.Controls.Add(this.btnShowCity);
@@ -256,7 +260,9 @@
             this.Controls.Add(this.lblHotelID);
             this.Controls.Add(this.labelHotelAdd);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddHotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddHotel";

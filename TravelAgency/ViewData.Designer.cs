@@ -57,9 +57,22 @@
             this.btnAddTrip = new System.Windows.Forms.Button();
             this.dataGridViewTrip = new System.Windows.Forms.DataGridView();
             this.tabPageSales = new System.Windows.Forms.TabPage();
-            this.pageSelect = new System.Windows.Forms.TabPage();
+            this.pageFilter = new System.Windows.Forms.TabPage();
             this.btnBackToMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.tableLayoutPanelSales = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
+            this.btnShowSales = new System.Windows.Forms.Button();
+            this.btnAddSales = new System.Windows.Forms.Button();
+            this.dataGridViewFilter = new System.Windows.Forms.DataGridView();
+            this.radioButtonCity = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomers = new System.Windows.Forms.RadioButton();
+            this.radioButtonHotel = new System.Windows.Forms.RadioButton();
+            this.labelName = new System.Windows.Forms.Label();
+            this.textBoxNameFilter = new System.Windows.Forms.TextBox();
+            this.comboBoxStars = new System.Windows.Forms.ComboBox();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.textBoxCountryFilter = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.pageCity.SuspendLayout();
             this.tableLayoutPanelCity.SuspendLayout();
@@ -73,7 +86,12 @@
             this.pageTrip.SuspendLayout();
             this.tableLayoutPanelTrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrip)).BeginInit();
+            this.tabPageSales.SuspendLayout();
+            this.pageFilter.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.tableLayoutPanelSales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilter)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -83,7 +101,7 @@
             this.tabControl.Controls.Add(this.pageHotel);
             this.tabControl.Controls.Add(this.pageTrip);
             this.tabControl.Controls.Add(this.tabPageSales);
-            this.tabControl.Controls.Add(this.pageSelect);
+            this.tabControl.Controls.Add(this.pageFilter);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(0, 31);
@@ -95,7 +113,7 @@
             // pageCity
             // 
             this.pageCity.Controls.Add(this.tableLayoutPanelCity);
-            this.pageCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageCity.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F);
             this.pageCity.Location = new System.Drawing.Point(4, 32);
             this.pageCity.Name = "pageCity";
             this.pageCity.Padding = new System.Windows.Forms.Padding(3);
@@ -127,7 +145,7 @@
             this.dataGridViewCity.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -136,7 +154,7 @@
             this.dataGridViewCity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -156,6 +174,7 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRefresh.Location = new System.Drawing.Point(863, 306);
@@ -168,6 +187,7 @@
             // 
             // btnAddCity
             // 
+            this.btnAddCity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCity.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.btnAddCity.Location = new System.Drawing.Point(863, 370);
@@ -228,6 +248,7 @@
             // 
             // btnRefreshCustomers
             // 
+            this.btnRefreshCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefreshCustomers.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefreshCustomers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshCustomers.Location = new System.Drawing.Point(875, 310);
@@ -240,6 +261,7 @@
             // 
             // btnAddCustomer
             // 
+            this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCustomer.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAddCustomer.Location = new System.Drawing.Point(875, 375);
             this.btnAddCustomer.Name = "btnAddCustomer";
@@ -299,6 +321,7 @@
             // 
             // btnRefreshHotel
             // 
+            this.btnRefreshHotel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefreshHotel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnRefreshHotel.Location = new System.Drawing.Point(887, 310);
             this.btnRefreshHotel.Name = "btnRefreshHotel";
@@ -310,6 +333,7 @@
             // 
             // btnAddHotel
             // 
+            this.btnAddHotel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddHotel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAddHotel.Location = new System.Drawing.Point(887, 375);
             this.btnAddHotel.Name = "btnAddHotel";
@@ -348,6 +372,7 @@
             // 
             // btnShow
             // 
+            this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShow.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnShow.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Location = new System.Drawing.Point(879, 310);
@@ -360,6 +385,7 @@
             // 
             // btnAddTrip
             // 
+            this.btnAddTrip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTrip.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAddTrip.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTrip.Location = new System.Drawing.Point(879, 375);
@@ -393,6 +419,7 @@
             // 
             // tabPageSales
             // 
+            this.tabPageSales.Controls.Add(this.tableLayoutPanelSales);
             this.tabPageSales.Location = new System.Drawing.Point(4, 32);
             this.tabPageSales.Name = "tabPageSales";
             this.tabPageSales.Size = new System.Drawing.Size(1031, 439);
@@ -400,26 +427,37 @@
             this.tabPageSales.Text = "Продажи";
             this.tabPageSales.UseVisualStyleBackColor = true;
             // 
-            // pageSelect
+            // pageFilter
             // 
-            this.pageSelect.Location = new System.Drawing.Point(4, 32);
-            this.pageSelect.Name = "pageSelect";
-            this.pageSelect.Size = new System.Drawing.Size(1031, 439);
-            this.pageSelect.TabIndex = 5;
-            this.pageSelect.Text = "SELECT";
-            this.pageSelect.UseVisualStyleBackColor = true;
+            this.pageFilter.Controls.Add(this.textBoxCountryFilter);
+            this.pageFilter.Controls.Add(this.labelCountry);
+            this.pageFilter.Controls.Add(this.comboBoxStars);
+            this.pageFilter.Controls.Add(this.textBoxNameFilter);
+            this.pageFilter.Controls.Add(this.labelName);
+            this.pageFilter.Controls.Add(this.radioButtonHotel);
+            this.pageFilter.Controls.Add(this.radioButtonCustomers);
+            this.pageFilter.Controls.Add(this.radioButtonCity);
+            this.pageFilter.Controls.Add(this.dataGridViewFilter);
+            this.pageFilter.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageFilter.Location = new System.Drawing.Point(4, 32);
+            this.pageFilter.Name = "pageFilter";
+            this.pageFilter.Size = new System.Drawing.Size(1031, 439);
+            this.pageFilter.TabIndex = 5;
+            this.pageFilter.Text = "Фильтр";
+            this.pageFilter.UseVisualStyleBackColor = true;
             // 
             // btnBackToMenu
             // 
-            this.btnBackToMenu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBackToMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBackToMenu.Name = "btnBackToMenu";
-            this.btnBackToMenu.Size = new System.Drawing.Size(129, 27);
+            this.btnBackToMenu.Size = new System.Drawing.Size(130, 27);
             this.btnBackToMenu.Text = "Back to menu";
             this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.Wheat;
+            this.menuStrip.BackColor = System.Drawing.Color.LemonChiffon;
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBackToMenu});
@@ -428,6 +466,163 @@
             this.menuStrip.Size = new System.Drawing.Size(1039, 31);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip";
+            // 
+            // tableLayoutPanelSales
+            // 
+            this.tableLayoutPanelSales.ColumnCount = 1;
+            this.tableLayoutPanelSales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelSales.Controls.Add(this.btnAddSales, 0, 2);
+            this.tableLayoutPanelSales.Controls.Add(this.dataGridViewSales, 0, 0);
+            this.tableLayoutPanelSales.Controls.Add(this.btnShowSales, 0, 1);
+            this.tableLayoutPanelSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelSales.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelSales.Name = "tableLayoutPanelSales";
+            this.tableLayoutPanelSales.RowCount = 3;
+            this.tableLayoutPanelSales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanelSales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelSales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelSales.Size = new System.Drawing.Size(1031, 439);
+            this.tableLayoutPanelSales.TabIndex = 0;
+            // 
+            // dataGridViewSales
+            // 
+            this.dataGridViewSales.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewSales.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewSales.Name = "dataGridViewSales";
+            this.dataGridViewSales.ReadOnly = true;
+            this.dataGridViewSales.RowHeadersWidth = 51;
+            this.dataGridViewSales.RowTemplate.Height = 24;
+            this.dataGridViewSales.Size = new System.Drawing.Size(1025, 301);
+            this.dataGridViewSales.TabIndex = 0;
+            // 
+            // btnShowSales
+            // 
+            this.btnShowSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnShowSales.Location = new System.Drawing.Point(897, 310);
+            this.btnShowSales.Name = "btnShowSales";
+            this.btnShowSales.Size = new System.Drawing.Size(131, 59);
+            this.btnShowSales.TabIndex = 1;
+            this.btnShowSales.Text = "Show Data";
+            this.btnShowSales.UseVisualStyleBackColor = true;
+            this.btnShowSales.Click += new System.EventHandler(this.btnShowSales_Click);
+            // 
+            // btnAddSales
+            // 
+            this.btnAddSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddSales.Location = new System.Drawing.Point(897, 375);
+            this.btnAddSales.Name = "btnAddSales";
+            this.btnAddSales.Size = new System.Drawing.Size(131, 61);
+            this.btnAddSales.TabIndex = 2;
+            this.btnAddSales.Text = "Add Sales";
+            this.btnAddSales.UseVisualStyleBackColor = true;
+            this.btnAddSales.Click += new System.EventHandler(this.btnAddSales_Click);
+            // 
+            // dataGridViewFilter
+            // 
+            this.dataGridViewFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewFilter.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewFilter.Name = "dataGridViewFilter";
+            this.dataGridViewFilter.RowHeadersWidth = 51;
+            this.dataGridViewFilter.RowTemplate.Height = 24;
+            this.dataGridViewFilter.Size = new System.Drawing.Size(1031, 289);
+            this.dataGridViewFilter.TabIndex = 0;
+            // 
+            // radioButtonCity
+            // 
+            this.radioButtonCity.AutoSize = true;
+            this.radioButtonCity.Location = new System.Drawing.Point(8, 295);
+            this.radioButtonCity.Name = "radioButtonCity";
+            this.radioButtonCity.Size = new System.Drawing.Size(182, 27);
+            this.radioButtonCity.TabIndex = 1;
+            this.radioButtonCity.TabStop = true;
+            this.radioButtonCity.Text = "Cities and Counties";
+            this.radioButtonCity.UseVisualStyleBackColor = true;
+            this.radioButtonCity.CheckedChanged += new System.EventHandler(this.radioButtonCity_CheckedChanged);
+            // 
+            // radioButtonCustomers
+            // 
+            this.radioButtonCustomers.AutoSize = true;
+            this.radioButtonCustomers.Location = new System.Drawing.Point(8, 328);
+            this.radioButtonCustomers.Name = "radioButtonCustomers";
+            this.radioButtonCustomers.Size = new System.Drawing.Size(116, 27);
+            this.radioButtonCustomers.TabIndex = 3;
+            this.radioButtonCustomers.TabStop = true;
+            this.radioButtonCustomers.Text = "Customers";
+            this.radioButtonCustomers.UseVisualStyleBackColor = true;
+            this.radioButtonCustomers.CheckedChanged += new System.EventHandler(this.radioButtonCustomers_CheckedChanged);
+            // 
+            // radioButtonHotel
+            // 
+            this.radioButtonHotel.AutoSize = true;
+            this.radioButtonHotel.Location = new System.Drawing.Point(8, 361);
+            this.radioButtonHotel.Name = "radioButtonHotel";
+            this.radioButtonHotel.Size = new System.Drawing.Size(82, 27);
+            this.radioButtonHotel.TabIndex = 4;
+            this.radioButtonHotel.TabStop = true;
+            this.radioButtonHotel.Text = "Hotels";
+            this.radioButtonHotel.UseVisualStyleBackColor = true;
+            this.radioButtonHotel.CheckedChanged += new System.EventHandler(this.radioButtonHotel_CheckedChanged);
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(614, 333);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(55, 22);
+            this.labelName.TabIndex = 5;
+            this.labelName.Text = "Имя :";
+            // 
+            // textBoxNameFilter
+            // 
+            this.textBoxNameFilter.Enabled = false;
+            this.textBoxNameFilter.Location = new System.Drawing.Point(699, 328);
+            this.textBoxNameFilter.Name = "textBoxNameFilter";
+            this.textBoxNameFilter.Size = new System.Drawing.Size(169, 30);
+            this.textBoxNameFilter.TabIndex = 6;
+            this.textBoxNameFilter.TextChanged += new System.EventHandler(this.textBoxNameFilter_TextChanged);
+            // 
+            // comboBoxStars
+            // 
+            this.comboBoxStars.Enabled = false;
+            this.comboBoxStars.FormattingEnabled = true;
+            this.comboBoxStars.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "All"});
+            this.comboBoxStars.Location = new System.Drawing.Point(699, 364);
+            this.comboBoxStars.Name = "comboBoxStars";
+            this.comboBoxStars.Size = new System.Drawing.Size(169, 31);
+            this.comboBoxStars.TabIndex = 7;
+            this.comboBoxStars.Text = "Звезды";
+            this.comboBoxStars.SelectedIndexChanged += new System.EventHandler(this.comboBoxStars_SelectedIndexChanged);
+            // 
+            // labelCountry
+            // 
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountry.Location = new System.Drawing.Point(614, 295);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(80, 22);
+            this.labelCountry.TabIndex = 8;
+            this.labelCountry.Text = "Страна :";
+            // 
+            // textBoxCountryFilter
+            // 
+            this.textBoxCountryFilter.Enabled = false;
+            this.textBoxCountryFilter.Location = new System.Drawing.Point(700, 292);
+            this.textBoxCountryFilter.Name = "textBoxCountryFilter";
+            this.textBoxCountryFilter.Size = new System.Drawing.Size(169, 30);
+            this.textBoxCountryFilter.TabIndex = 9;
+            this.textBoxCountryFilter.TextChanged += new System.EventHandler(this.textBoxCountryFilter_TextChanged);
             // 
             // ViewData
             // 
@@ -455,8 +650,14 @@
             this.pageTrip.ResumeLayout(false);
             this.tableLayoutPanelTrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrip)).EndInit();
+            this.tabPageSales.ResumeLayout(false);
+            this.pageFilter.ResumeLayout(false);
+            this.pageFilter.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.tableLayoutPanelSales.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,7 +669,7 @@
         private System.Windows.Forms.TabPage pageCity;
         private System.Windows.Forms.TabPage pageCustomers;
         private System.Windows.Forms.TabPage pageHotel;
-        private System.Windows.Forms.TabPage pageSelect;
+        private System.Windows.Forms.TabPage pageFilter;
         private System.Windows.Forms.ToolStripMenuItem btnBackToMenu;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.Button btnRefresh;
@@ -489,5 +690,18 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelCustomer;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.TabPage tabPageSales;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSales;
+        private System.Windows.Forms.Button btnAddSales;
+        private System.Windows.Forms.DataGridView dataGridViewSales;
+        private System.Windows.Forms.Button btnShowSales;
+        private System.Windows.Forms.TextBox textBoxNameFilter;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.RadioButton radioButtonHotel;
+        private System.Windows.Forms.RadioButton radioButtonCustomers;
+        private System.Windows.Forms.RadioButton radioButtonCity;
+        private System.Windows.Forms.DataGridView dataGridViewFilter;
+        private System.Windows.Forms.ComboBox comboBoxStars;
+        private System.Windows.Forms.TextBox textBoxCountryFilter;
+        private System.Windows.Forms.Label labelCountry;
     }
 }

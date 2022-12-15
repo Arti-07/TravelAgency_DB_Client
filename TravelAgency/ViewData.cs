@@ -78,7 +78,7 @@ namespace TravelAgency
             try
             {
                 NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(
-                "SELECT customer_id AS \"Номер клиента\", name AS \"Имя\", surname AS \"Фамилия\", patronymic AS \"Отчество\", date_of_birth AS \"Дата рождения\", phone_number AS \"Телефон\" FROM customer", connToTravel);
+                "SELECT customer_id AS \"Номер клиента\", name AS \"Имя\", surname AS \"Фамилия\", patronymic AS \"Отчество\", date_of_birth AS \"Дата рождения\", phone_number AS \"Телефон\" FROM customer ORDER BY customer_id ASC", connToTravel);
                 DataSet ds = new DataSet();
                 dataAdapter.Fill(ds);
 
@@ -300,6 +300,28 @@ namespace TravelAgency
                 MessageBox.Show(exeption.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void dataGridViewCity_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewCustomers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selRowNum = dataGridViewCustomers.CurrentCell.RowIndex;
+            var selectedId = dataGridViewCustomers.Rows[selRowNum].Cells[0].Value.ToString();
+            UpdateCustomer updateCustomer = new UpdateCustomer(int.Parse(selectedId));
+            updateCustomer.ShowDialog();
+        }
+
+
+        private void dataGridViewHotel_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selRowNum = dataGridViewHotel.CurrentCell.RowIndex;
+            var selectedId = dataGridViewHotel.Rows[selRowNum].Cells[0].Value.ToString();
+            UpdateHotel updateHotel = new UpdateHotel(int.Parse(selectedId));
+            updateHotel.ShowDialog();
         }
     }
 }

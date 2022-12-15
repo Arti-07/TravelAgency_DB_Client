@@ -57,22 +57,22 @@
             this.btnAddTrip = new System.Windows.Forms.Button();
             this.dataGridViewTrip = new System.Windows.Forms.DataGridView();
             this.tabPageSales = new System.Windows.Forms.TabPage();
-            this.pageFilter = new System.Windows.Forms.TabPage();
-            this.btnBackToMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tableLayoutPanelSales = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddSales = new System.Windows.Forms.Button();
             this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.btnShowSales = new System.Windows.Forms.Button();
-            this.btnAddSales = new System.Windows.Forms.Button();
-            this.dataGridViewFilter = new System.Windows.Forms.DataGridView();
-            this.radioButtonCity = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomers = new System.Windows.Forms.RadioButton();
-            this.radioButtonHotel = new System.Windows.Forms.RadioButton();
-            this.labelName = new System.Windows.Forms.Label();
-            this.textBoxNameFilter = new System.Windows.Forms.TextBox();
-            this.comboBoxStars = new System.Windows.Forms.ComboBox();
-            this.labelCountry = new System.Windows.Forms.Label();
+            this.pageFilter = new System.Windows.Forms.TabPage();
             this.textBoxCountryFilter = new System.Windows.Forms.TextBox();
+            this.labelCountry = new System.Windows.Forms.Label();
+            this.comboBoxStars = new System.Windows.Forms.ComboBox();
+            this.textBoxNameFilter = new System.Windows.Forms.TextBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.radioButtonHotel = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomers = new System.Windows.Forms.RadioButton();
+            this.radioButtonCity = new System.Windows.Forms.RadioButton();
+            this.dataGridViewFilter = new System.Windows.Forms.DataGridView();
+            this.btnBackToMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tabControl.SuspendLayout();
             this.pageCity.SuspendLayout();
             this.tableLayoutPanelCity.SuspendLayout();
@@ -87,11 +87,11 @@
             this.tableLayoutPanelTrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrip)).BeginInit();
             this.tabPageSales.SuspendLayout();
-            this.pageFilter.SuspendLayout();
-            this.menuStrip.SuspendLayout();
             this.tableLayoutPanelSales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
+            this.pageFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilter)).BeginInit();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -171,6 +171,7 @@
             this.dataGridViewCity.RowTemplate.Height = 24;
             this.dataGridViewCity.Size = new System.Drawing.Size(1019, 297);
             this.dataGridViewCity.TabIndex = 1;
+            this.dataGridViewCity.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCity_CellContentDoubleClick);
             // 
             // btnRefresh
             // 
@@ -245,6 +246,7 @@
             this.dataGridViewCustomers.RowTemplate.Height = 24;
             this.dataGridViewCustomers.Size = new System.Drawing.Size(1025, 301);
             this.dataGridViewCustomers.TabIndex = 1;
+            this.dataGridViewCustomers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCustomers_CellContentDoubleClick);
             // 
             // btnRefreshCustomers
             // 
@@ -318,6 +320,7 @@
             this.dataGridViewHotel.RowTemplate.Height = 24;
             this.dataGridViewHotel.Size = new System.Drawing.Size(1025, 301);
             this.dataGridViewHotel.TabIndex = 0;
+            this.dataGridViewHotel.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHotel_CellContentDoubleClick);
             // 
             // btnRefreshHotel
             // 
@@ -427,46 +430,6 @@
             this.tabPageSales.Text = "Продажи";
             this.tabPageSales.UseVisualStyleBackColor = true;
             // 
-            // pageFilter
-            // 
-            this.pageFilter.Controls.Add(this.textBoxCountryFilter);
-            this.pageFilter.Controls.Add(this.labelCountry);
-            this.pageFilter.Controls.Add(this.comboBoxStars);
-            this.pageFilter.Controls.Add(this.textBoxNameFilter);
-            this.pageFilter.Controls.Add(this.labelName);
-            this.pageFilter.Controls.Add(this.radioButtonHotel);
-            this.pageFilter.Controls.Add(this.radioButtonCustomers);
-            this.pageFilter.Controls.Add(this.radioButtonCity);
-            this.pageFilter.Controls.Add(this.dataGridViewFilter);
-            this.pageFilter.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pageFilter.Location = new System.Drawing.Point(4, 32);
-            this.pageFilter.Name = "pageFilter";
-            this.pageFilter.Size = new System.Drawing.Size(1031, 439);
-            this.pageFilter.TabIndex = 5;
-            this.pageFilter.Text = "Фильтр";
-            this.pageFilter.UseVisualStyleBackColor = true;
-            // 
-            // btnBackToMenu
-            // 
-            this.btnBackToMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBackToMenu.Name = "btnBackToMenu";
-            this.btnBackToMenu.Size = new System.Drawing.Size(130, 27);
-            this.btnBackToMenu.Text = "Back to menu";
-            this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.BackColor = System.Drawing.Color.LemonChiffon;
-            this.menuStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBackToMenu});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1039, 31);
-            this.menuStrip.TabIndex = 1;
-            this.menuStrip.Text = "menuStrip";
-            // 
             // tableLayoutPanelSales
             // 
             this.tableLayoutPanelSales.ColumnCount = 1;
@@ -483,6 +446,18 @@
             this.tableLayoutPanelSales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanelSales.Size = new System.Drawing.Size(1031, 439);
             this.tableLayoutPanelSales.TabIndex = 0;
+            // 
+            // btnAddSales
+            // 
+            this.btnAddSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddSales.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddSales.Location = new System.Drawing.Point(897, 375);
+            this.btnAddSales.Name = "btnAddSales";
+            this.btnAddSales.Size = new System.Drawing.Size(131, 61);
+            this.btnAddSales.TabIndex = 2;
+            this.btnAddSales.Text = "Add Sales";
+            this.btnAddSales.UseVisualStyleBackColor = true;
+            this.btnAddSales.Click += new System.EventHandler(this.btnAddSales_Click);
             // 
             // dataGridViewSales
             // 
@@ -509,83 +484,43 @@
             this.btnShowSales.UseVisualStyleBackColor = true;
             this.btnShowSales.Click += new System.EventHandler(this.btnShowSales_Click);
             // 
-            // btnAddSales
+            // pageFilter
             // 
-            this.btnAddSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddSales.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAddSales.Location = new System.Drawing.Point(897, 375);
-            this.btnAddSales.Name = "btnAddSales";
-            this.btnAddSales.Size = new System.Drawing.Size(131, 61);
-            this.btnAddSales.TabIndex = 2;
-            this.btnAddSales.Text = "Add Sales";
-            this.btnAddSales.UseVisualStyleBackColor = true;
-            this.btnAddSales.Click += new System.EventHandler(this.btnAddSales_Click);
+            this.pageFilter.Controls.Add(this.textBoxCountryFilter);
+            this.pageFilter.Controls.Add(this.labelCountry);
+            this.pageFilter.Controls.Add(this.comboBoxStars);
+            this.pageFilter.Controls.Add(this.textBoxNameFilter);
+            this.pageFilter.Controls.Add(this.labelName);
+            this.pageFilter.Controls.Add(this.radioButtonHotel);
+            this.pageFilter.Controls.Add(this.radioButtonCustomers);
+            this.pageFilter.Controls.Add(this.radioButtonCity);
+            this.pageFilter.Controls.Add(this.dataGridViewFilter);
+            this.pageFilter.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pageFilter.Location = new System.Drawing.Point(4, 32);
+            this.pageFilter.Name = "pageFilter";
+            this.pageFilter.Size = new System.Drawing.Size(1031, 439);
+            this.pageFilter.TabIndex = 5;
+            this.pageFilter.Text = "Фильтр";
+            this.pageFilter.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewFilter
+            // textBoxCountryFilter
             // 
-            this.dataGridViewFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewFilter.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewFilter.Name = "dataGridViewFilter";
-            this.dataGridViewFilter.RowHeadersWidth = 51;
-            this.dataGridViewFilter.RowTemplate.Height = 24;
-            this.dataGridViewFilter.Size = new System.Drawing.Size(1031, 289);
-            this.dataGridViewFilter.TabIndex = 0;
+            this.textBoxCountryFilter.Enabled = false;
+            this.textBoxCountryFilter.Location = new System.Drawing.Point(700, 292);
+            this.textBoxCountryFilter.Name = "textBoxCountryFilter";
+            this.textBoxCountryFilter.Size = new System.Drawing.Size(169, 30);
+            this.textBoxCountryFilter.TabIndex = 9;
+            this.textBoxCountryFilter.TextChanged += new System.EventHandler(this.textBoxCountryFilter_TextChanged);
             // 
-            // radioButtonCity
+            // labelCountry
             // 
-            this.radioButtonCity.AutoSize = true;
-            this.radioButtonCity.Location = new System.Drawing.Point(8, 295);
-            this.radioButtonCity.Name = "radioButtonCity";
-            this.radioButtonCity.Size = new System.Drawing.Size(182, 27);
-            this.radioButtonCity.TabIndex = 1;
-            this.radioButtonCity.TabStop = true;
-            this.radioButtonCity.Text = "Cities and Counties";
-            this.radioButtonCity.UseVisualStyleBackColor = true;
-            this.radioButtonCity.CheckedChanged += new System.EventHandler(this.radioButtonCity_CheckedChanged);
-            // 
-            // radioButtonCustomers
-            // 
-            this.radioButtonCustomers.AutoSize = true;
-            this.radioButtonCustomers.Location = new System.Drawing.Point(8, 328);
-            this.radioButtonCustomers.Name = "radioButtonCustomers";
-            this.radioButtonCustomers.Size = new System.Drawing.Size(116, 27);
-            this.radioButtonCustomers.TabIndex = 3;
-            this.radioButtonCustomers.TabStop = true;
-            this.radioButtonCustomers.Text = "Customers";
-            this.radioButtonCustomers.UseVisualStyleBackColor = true;
-            this.radioButtonCustomers.CheckedChanged += new System.EventHandler(this.radioButtonCustomers_CheckedChanged);
-            // 
-            // radioButtonHotel
-            // 
-            this.radioButtonHotel.AutoSize = true;
-            this.radioButtonHotel.Location = new System.Drawing.Point(8, 361);
-            this.radioButtonHotel.Name = "radioButtonHotel";
-            this.radioButtonHotel.Size = new System.Drawing.Size(82, 27);
-            this.radioButtonHotel.TabIndex = 4;
-            this.radioButtonHotel.TabStop = true;
-            this.radioButtonHotel.Text = "Hotels";
-            this.radioButtonHotel.UseVisualStyleBackColor = true;
-            this.radioButtonHotel.CheckedChanged += new System.EventHandler(this.radioButtonHotel_CheckedChanged);
-            // 
-            // labelName
-            // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(614, 333);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(55, 22);
-            this.labelName.TabIndex = 5;
-            this.labelName.Text = "Имя :";
-            // 
-            // textBoxNameFilter
-            // 
-            this.textBoxNameFilter.Enabled = false;
-            this.textBoxNameFilter.Location = new System.Drawing.Point(699, 328);
-            this.textBoxNameFilter.Name = "textBoxNameFilter";
-            this.textBoxNameFilter.Size = new System.Drawing.Size(169, 30);
-            this.textBoxNameFilter.TabIndex = 6;
-            this.textBoxNameFilter.TextChanged += new System.EventHandler(this.textBoxNameFilter_TextChanged);
+            this.labelCountry.AutoSize = true;
+            this.labelCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountry.Location = new System.Drawing.Point(614, 295);
+            this.labelCountry.Name = "labelCountry";
+            this.labelCountry.Size = new System.Drawing.Size(80, 22);
+            this.labelCountry.TabIndex = 8;
+            this.labelCountry.Text = "Страна :";
             // 
             // comboBoxStars
             // 
@@ -605,24 +540,92 @@
             this.comboBoxStars.Text = "Звезды";
             this.comboBoxStars.SelectedIndexChanged += new System.EventHandler(this.comboBoxStars_SelectedIndexChanged);
             // 
-            // labelCountry
+            // textBoxNameFilter
             // 
-            this.labelCountry.AutoSize = true;
-            this.labelCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCountry.Location = new System.Drawing.Point(614, 295);
-            this.labelCountry.Name = "labelCountry";
-            this.labelCountry.Size = new System.Drawing.Size(80, 22);
-            this.labelCountry.TabIndex = 8;
-            this.labelCountry.Text = "Страна :";
+            this.textBoxNameFilter.Enabled = false;
+            this.textBoxNameFilter.Location = new System.Drawing.Point(699, 328);
+            this.textBoxNameFilter.Name = "textBoxNameFilter";
+            this.textBoxNameFilter.Size = new System.Drawing.Size(169, 30);
+            this.textBoxNameFilter.TabIndex = 6;
+            this.textBoxNameFilter.TextChanged += new System.EventHandler(this.textBoxNameFilter_TextChanged);
             // 
-            // textBoxCountryFilter
+            // labelName
             // 
-            this.textBoxCountryFilter.Enabled = false;
-            this.textBoxCountryFilter.Location = new System.Drawing.Point(700, 292);
-            this.textBoxCountryFilter.Name = "textBoxCountryFilter";
-            this.textBoxCountryFilter.Size = new System.Drawing.Size(169, 30);
-            this.textBoxCountryFilter.TabIndex = 9;
-            this.textBoxCountryFilter.TextChanged += new System.EventHandler(this.textBoxCountryFilter_TextChanged);
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(614, 333);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(55, 22);
+            this.labelName.TabIndex = 5;
+            this.labelName.Text = "Имя :";
+            // 
+            // radioButtonHotel
+            // 
+            this.radioButtonHotel.AutoSize = true;
+            this.radioButtonHotel.Location = new System.Drawing.Point(8, 361);
+            this.radioButtonHotel.Name = "radioButtonHotel";
+            this.radioButtonHotel.Size = new System.Drawing.Size(82, 27);
+            this.radioButtonHotel.TabIndex = 4;
+            this.radioButtonHotel.TabStop = true;
+            this.radioButtonHotel.Text = "Hotels";
+            this.radioButtonHotel.UseVisualStyleBackColor = true;
+            this.radioButtonHotel.CheckedChanged += new System.EventHandler(this.radioButtonHotel_CheckedChanged);
+            // 
+            // radioButtonCustomers
+            // 
+            this.radioButtonCustomers.AutoSize = true;
+            this.radioButtonCustomers.Location = new System.Drawing.Point(8, 328);
+            this.radioButtonCustomers.Name = "radioButtonCustomers";
+            this.radioButtonCustomers.Size = new System.Drawing.Size(116, 27);
+            this.radioButtonCustomers.TabIndex = 3;
+            this.radioButtonCustomers.TabStop = true;
+            this.radioButtonCustomers.Text = "Customers";
+            this.radioButtonCustomers.UseVisualStyleBackColor = true;
+            this.radioButtonCustomers.CheckedChanged += new System.EventHandler(this.radioButtonCustomers_CheckedChanged);
+            // 
+            // radioButtonCity
+            // 
+            this.radioButtonCity.AutoSize = true;
+            this.radioButtonCity.Location = new System.Drawing.Point(8, 295);
+            this.radioButtonCity.Name = "radioButtonCity";
+            this.radioButtonCity.Size = new System.Drawing.Size(182, 27);
+            this.radioButtonCity.TabIndex = 1;
+            this.radioButtonCity.TabStop = true;
+            this.radioButtonCity.Text = "Cities and Counties";
+            this.radioButtonCity.UseVisualStyleBackColor = true;
+            this.radioButtonCity.CheckedChanged += new System.EventHandler(this.radioButtonCity_CheckedChanged);
+            // 
+            // dataGridViewFilter
+            // 
+            this.dataGridViewFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewFilter.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewFilter.Name = "dataGridViewFilter";
+            this.dataGridViewFilter.RowHeadersWidth = 51;
+            this.dataGridViewFilter.RowTemplate.Height = 24;
+            this.dataGridViewFilter.Size = new System.Drawing.Size(1031, 289);
+            this.dataGridViewFilter.TabIndex = 0;
+            // 
+            // btnBackToMenu
+            // 
+            this.btnBackToMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBackToMenu.Name = "btnBackToMenu";
+            this.btnBackToMenu.Size = new System.Drawing.Size(130, 27);
+            this.btnBackToMenu.Text = "Back to menu";
+            this.btnBackToMenu.Click += new System.EventHandler(this.btnBackToMenu_Click);
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.BackColor = System.Drawing.Color.LemonChiffon;
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBackToMenu});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1039, 31);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip";
             // 
             // ViewData
             // 
@@ -651,13 +654,13 @@
             this.tableLayoutPanelTrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrip)).EndInit();
             this.tabPageSales.ResumeLayout(false);
-            this.pageFilter.ResumeLayout(false);
-            this.pageFilter.PerformLayout();
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.tableLayoutPanelSales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
+            this.pageFilter.ResumeLayout(false);
+            this.pageFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFilter)).EndInit();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
